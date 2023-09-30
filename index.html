@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eddyral | Editors Unite</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="white.png">
+</head>
+<body>
+	<div class="text">
+		<h1 id="p1">Eddyral</h1>
+	</div>
+
+
+	<div class="navbar">
+		<nav>
+			<img src="white.png" class="logo" id="home">
+			<ul id="menuList">
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#down">Downloads</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#socials">Socials</a></li>
+			</ul>
+			<img src="menu.png" class="menu-icon" onclick="togglemenu()">
+		</nav>
+	</div>
+
+	<div class="members">
+		<h2>The Crew: <span id="text"></span></h2>
+	</div>
+
+	
+
+	<div class="socials">
+		<li class="word" id="socials" >Join Us:</li>
+		<li ><a href="https://www.instagram.com/eddyral.nation/" target="blank"><img src="insta.png" class="in"></a></li>
+		<li ><a href="https://discord.com/channels/1108074615168831508/1108074615688937483" target="blank"><img src="discord.png"class="dc"></a></li>
+		<ul class="har">
+			<li>Instagram</li>
+			<li>Discord</li>
+		</ul>
+	</div>
+
+	<div class="down" id="p2">
+		<h4 id="down">Downloads</h4>
+		<p>[Click to download our assets!]</p><br><p class="clips">Clips:</p>
+		<ul>
+			<li><a href="https://drive.google.com/drive/folders/1D2nonU0e9S0KuunGCjWQ1nSqEO61zIRI"> Flowyzee clips pack one</a></li>
+			<li><a href="https://drive.google.com/drive/folders/1TSHFGgtanpbPRa_bYQZKnSh05bClnpFG"> Azard clips</a></li>
+			<li><a href="https://drive.google.com/drive/u/1/folders/1IjQ8XYdGNT2snxJLRS-U1ksBpopiqipP"> Eddyral Intro</a></li>
+		</ul>
+	</div>
+
+	<div class="about" id="p3">
+		<h4 id="about">About Us</h4>
+		<p>Eddyral or EDitors DYR(precious) ALly is a group, estd. on 2023 to unite all unsung editors(listed by 'The Crew' above). Follow us on our Social media handles if you like our works!<br><br>PS: This isn't a community and we don't post others' edits apart from the members.</p>
+
+		<img src="white.png" class="aboutimg">
+	</div>
+
+	<div class="vid">
+		<h4>Check this out!</h4>
+		<video controls >
+			<source src="axl.mp4">
+		</video>
+	</div>
+
+	<div class="footer">
+		<h5>Eddyral.Nation | 2023</h5>
+	</div>
+
+	<div class="up" id="p3">
+		<li><a href="#home"><ion-icon name="arrow-up-outline"></ion-icon></a></li>
+	</div>
+
+	<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
+
+	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+	<script>
+		let typingText=new Typed("#text", {
+			strings: ["Waes Envi","Azard","Nexus","Miguel","Evi","Oshino"],
+			loop: true,
+			typeSpeed: 100,
+			backSpeed: 50,
+			backDelay: 500,
+		})
+	</script>
+
+
+	<script>
+		var menulist=document.getElementbyId("menuList");
+
+		menuList.style.maxHeight="0px";
+
+		function togglemenu()
+		{
+			if(menuList.style.maxHeight=="0px")
+			{
+				menuList.style.maxHeight="180px";
+			}
+			else
+			{
+				menuList.style.maxHeight="0px";
+			}
+		}
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script class="hello">
+		gsap.from("#p1",{
+			scrollTrigger : {
+				scrub: true
+			},
+			scale:3,
+
+		})
+		gsap.from("#p2",{
+			scrollTrigger : {
+				scrub: true
+			},
+			scale:0.5,
+			opacity:80,
+		})	
+		gsap.from("#p3",{
+			scrollTrigger : {
+				scrub: true
+			},
+			opacity:0,
+		})		
+	</script>
+
+	
+
+</body>
+</html>
